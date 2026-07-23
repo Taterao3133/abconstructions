@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --cream: #f7f2e9;
+  --linen: #fbfaf6;
+  --olive: #6f7353;
+  --moss: #4d553b;
+  --charcoal: #20211d;
+  --gold: #c99a38;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--charcoal);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+body::selection {
+  background: rgba(111, 115, 83, 0.22);
+}
+
+.font-display {
+  font-family: "DM Serif Display", Georgia, serif;
+  letter-spacing: 0;
+}
+
+.container {
+  width: min(100% - 32px, 1160px);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  color: var(--olive);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.premium-card {
+  border: 1px solid rgba(32, 33, 29, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 80px rgba(32, 33, 29, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-photo {
+  overflow: hidden;
+  border-bottom-left-radius: 260px;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  z-index: 2;
+  width: 88px;
+  height: 100%;
+  border-right: 4px solid rgba(255, 255, 255, 0.92);
+  border-radius: 0 50% 50% 0;
+  pointer-events: none;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  left: 68px;
+  top: 50%;
+  z-index: 3;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .hero-photo {
+    border-bottom-left-radius: 0;
+  }
+
+  .hero-photo::before,
+  .hero-photo::after {
+    display: none;
+  }
+}
