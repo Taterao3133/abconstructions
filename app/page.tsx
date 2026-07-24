@@ -1,9 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Clock, Mail, MapPin, Phone, Play, Quote, Star } from "lucide-react";
+import { ArrowRight, ChevronRight, Play, Quote, Star } from "lucide-react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { processSteps, projects, services, stats } from "@/lib/site-data";
+import { MobileContactBlock } from "@/components/mobile-contact-block";
+import { ProjectGrid } from "@/components/project-grid";
+import { nearbyServiceAreas, pageMetadata } from "@/lib/seo";
+import { processSteps, services, stats } from "@/lib/site-data";
+
+export const metadata = pageMetadata({
+  title: "Construction Company in Banswada",
+  description:
+    "AB Construction & Interior provides construction, interiors, villa construction, home building and commercial construction services from Banswada within a 150 km Telangana service area.",
+  path: "/",
+  keywords: [
+    "Construction Company in Banswada",
+    "Interior Designers in Banswada",
+    "Villa Construction in Telangana",
+    "Home Builders in Hyderabad",
+    "Commercial Construction Services"
+  ]
+});
 
 export default function HomePage() {
   const processStats = [
@@ -131,23 +148,46 @@ export default function HomePage() {
                 View All Projects <ArrowRight size={16} />
               </Link>
             </div>
-            <div className="grid gap-4 max-md:mt-7 md:grid-cols-2 lg:grid-cols-4">
-              {projects.map((project) => (
-                <Link key={project.title} href="/projects/signature-villa" className="group overflow-hidden rounded-[7px] border border-charcoal/10 bg-white">
-                  <div className="relative h-[178px] max-md:h-[224px]">
-                    <Image src={project.image} alt={project.title} fill className="object-cover" sizes="25vw" />
-                  </div>
-                  <div className="flex items-center justify-between p-4">
-                    <div>
-                      <h3 className="text-[15px] font-bold">{project.title}</h3>
-                      <p className="mt-1 text-[12px] text-charcoal/62">{project.type}</p>
-                    </div>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-[3px] bg-moss text-white transition group-hover:bg-charcoal">
-                      <ArrowRight size={15} />
-                    </span>
-                  </div>
-                </Link>
+            <ProjectGrid compact />
+          </div>
+        </section>
+
+        <section className="bg-white py-14 max-md:py-10">
+          <div className="container grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="eyebrow">Service Area</p>
+              <h2 className="font-display mt-4 text-[34px] leading-[1.08] text-charcoal max-md:text-[29px]">
+                Construction and Interior Services Within 150 km of Banswada
+              </h2>
+              <p className="mt-5 text-[14px] leading-7 text-charcoal/72">
+                Our office is in Banswada 503187, and we serve homeowners, villa owners and commercial clients across nearby Telangana locations within an approximate 150 km radius.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {[
+                "Construction Company in Banswada",
+                "Interior Designers in Banswada",
+                "Villa Construction in Telangana",
+                "Home Builders in Hyderabad",
+                "Commercial Construction Services"
+              ].map((term) => (
+                <article key={term} className="rounded-md border border-charcoal/10 bg-[#fbfaf6] p-5">
+                  <h3 className="text-[15px] font-bold text-charcoal">{term}</h3>
+                  <p className="mt-3 text-[13px] leading-6 text-charcoal/65">
+                    Planning, execution and finishing support by a local construction and interiors team based in Banswada.
+                  </p>
+                </article>
               ))}
+            </div>
+            <div className="lg:col-span-2">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-charcoal/50">Nearby locations covered</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {nearbyServiceAreas.map((area) => (
+                  <span key={area} className="rounded-[3px] border border-charcoal/10 bg-linen px-3 py-2 text-sm text-charcoal/70">
+                    {area}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -228,28 +268,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="hidden bg-[#fbfaf6] py-10 max-md:block">
-          <div className="container">
-            <p className="eyebrow">Let's Talk</p>
-            <h2 className="font-display mt-4 text-[38px] leading-none">Get In Touch</h2>
-            <span className="mt-6 block h-[12px] w-10 border-y border-olive" />
-            <p className="mt-6 max-w-[250px] text-[15px] leading-7 text-charcoal/72">
-              We are here to answer your queries and help you build your dream project.
-            </p>
-            <div className="mt-7 grid gap-6 text-[14px] text-charcoal/80">
-              <p className="flex items-center gap-5"><Phone className="text-olive" size={23} fill="currentColor" /> +91 98765 43210</p>
-              <p className="flex items-center gap-5"><Mail className="text-olive" size={23} /> info@abconstruction.com</p>
-              <p className="flex items-start gap-5"><MapPin className="mt-1 text-olive" size={23} fill="currentColor" /> 123, Green Avenue,<br />Hyderabad, Telangana 500081</p>
-              <p className="flex items-center gap-5"><Clock className="text-olive" size={23} /> Mon - Sat: 9:00 AM - 7:00 PM</p>
-            </div>
-            <Link href="/contact" className="mt-8 flex h-14 items-center justify-between rounded-[4px] bg-moss px-6 text-sm font-bold text-white">
-              Contact Us <ArrowRight size={18} />
-            </Link>
-            <div className="relative mt-8 h-[148px] overflow-hidden rounded-[4px] border border-charcoal/8">
-              <Image src="/demo/mobile-map.png" alt="AB Construction & Interior map location" fill className="object-cover" sizes="100vw" />
-            </div>
-          </div>
-        </section>
+        <MobileContactBlock />
 
         <section className="hidden bg-[#fbfaf6] py-10 max-md:block">
           <div className="container">
