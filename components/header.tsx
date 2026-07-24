@@ -28,7 +28,7 @@ export function Header() {
       </div>
       <div className="container flex h-[74px] items-center justify-between">
         <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="AB Construction & Interior home">
-          <span className="flex items-center gap-3 leading-tight">
+          {/* <span className="flex items-center gap-3 leading-tight">
             <Image
               src={settings.logo}
               alt={settings.businessName}
@@ -38,7 +38,35 @@ export function Header() {
               className="h-14 w-14 shrink-0 rounded-sm object-contain max-md:h-12 max-md:w-12"
             />
             <span className="block max-w-[132px] text-[13px] font-bold uppercase leading-[1.35] tracking-[0.22em] text-charcoal max-md:max-w-[112px] max-md:text-[10px] max-md:tracking-[0.18em]">
-              Construction<br className="hidden max-md:block" /> & Interior
+             AB<br className="hidden max-md:block" /> Constructions & Interior
+            </span>
+          </span> */}
+          <span className="flex items-center gap-3">
+            <Image
+              src={settings.logo}
+              alt={settings.businessName}
+              width={56}
+              height={56}
+              priority
+              className="h-14 w-14 shrink-0 rounded-sm object-contain max-md:h-12 max-md:w-12"
+            />
+
+            <span className="flex flex-col ">
+              {/* First Line */}
+              <span className="text-[22px] font-semibold uppercase tracking-[0.08em] leading-none text-charcoal max-md:text-[16px]">
+                AB BUILDERS
+              </span>
+
+              {/* Second Line */}
+              <span className="mt-1 flex items-center gap-2">
+                <span className="h-px w-8 bg-[#B68B2E] max-md:w-5" />
+
+                <span className="text-[12px] font-semibold uppercase tracking-[0.35em] text-charcoal max-md:text-[9px]">
+                  &amp; CONSTRUCTIONS
+                </span>
+
+                <span className="h-px w-8 bg-[#B68B2E] max-md:w-5" />
+              </span>
             </span>
           </span>
         </Link>

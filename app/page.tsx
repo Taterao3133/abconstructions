@@ -252,8 +252,10 @@ export default function HomePage() {
               </div>
             </article>
             <article className="grid overflow-hidden bg-[#f7f2ea] max-md:grid-cols-[58%_42%] lg:grid-cols-[48%_52%]">
-              <div className="p-10 lg:p-14">
-                <h2 className="font-display text-[44px] leading-[1.06] max-md:text-[28px]">Let’s Build Your Dream Project</h2>
+              <div className="p-2 lg:p-14">
+                <h2 className="font-display text-[44px] leading-[1.06] max-md:text-[28px] max-sm:hidden">Let’s Build Your Dream Project  </h2> 
+                <h2 className="font-display mt-2 text-[44px] leading-[1.06] max-md:text-[28px] lg:hidden">Let’s Build </h2> 
+                 <h2 className="font-display text-[14px] leading-[1.06] lg:hidden "> Your Dream Project</h2>
                 <p className="mt-5 text-[13px] leading-6 text-charcoal/70">
                   Have a project in mind? Let’s talk about how we can bring your vision to life.
                 </p>

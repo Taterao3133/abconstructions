@@ -28,7 +28,7 @@ export const contact = {
 };
 
 export const siteSettings = {
-  businessName: "AB Construction & Interior",
+  businessName: "AB BUILDERS & Constructions",
   logo: "/ab-logo.jpeg",
   aboutText:
     "AB Construction & Interior is a leading construction and interior design company delivering residential, commercial and luxury projects with innovation, quality and transparency."
