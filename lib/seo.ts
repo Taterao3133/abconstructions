@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 
 export const siteUrl = "https://abconstructionsandinterior.in";
-export const businessName = "AB Construction & Interior";
-export const businessTitle = "AB Construction & Interior";
+export const businessName = "AB Builders & Constructions";
+export const businessTitle = "AB Builders & Constructions";
 export const officeLatitude = 18.3788899;
 export const officeLongitude = 77.8771197;
 export const serviceRadiusMeters = 150000;
 
 export const priorityKeywords = [
   "Construction Company in Banswada",
+  "construction in banswada",
+  "interior banswada",
+  "builders in banswada",
+  "house building in banswada",
+  "banswada",
+  "designer in banswada",
   "Interior Designers in Banswada",
   "Villa Construction in Telangana",
   "Home Builders in Hyderabad",
@@ -24,6 +30,7 @@ export const nearbyServiceAreas = [
   "Banswada",
   "Kamareddy",
   "Nizamabad",
+  "Pitlam",
   "Bodhan",
   "Medak",
   "Sangareddy",
@@ -126,7 +133,7 @@ export const localBusinessJsonLd = {
     "Construction Company in Banswada",
     "Interior Designers in Banswada",
     "Villa Construction in Telangana",
-    "Home Builders in Hyderabad",
+    "Home Builders in Banswada",
     "Commercial Construction Services"
   ].map((service) => ({
     "@type": "Offer",

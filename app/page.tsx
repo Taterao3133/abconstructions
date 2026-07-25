@@ -56,7 +56,7 @@ export default function HomePage() {
                 Beautiful Spaces Built for <span className="text-olive">Living.</span>
               </h1>
               <p className="mt-6 max-w-[390px] text-[15px] leading-8 text-charcoal/72 max-md:text-[14px] max-md:leading-7">
-                We create exceptional construction and interior solutions that blend aesthetics, functionality and quality craftsmanship.
+                We create exceptional construction and interior solutions that blend aesthetics. Trusted Construction Company in Banswada
               </p>
               <div className="mt-8 flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-5">
                 <Link href="/projects" className="inline-flex h-12 items-center gap-5 rounded-[4px] bg-moss px-6 text-sm font-bold text-white transition hover:bg-charcoal">

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "Construction Company in Banswada | AB Construction & Interior",
+    title: "AB Builders & Constructions in Banswada | Interior Designers",
     description:
       "Construction, interiors, villa building and commercial construction services from Banswada across Telangana.",
     url: siteUrl,
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Construction Company in Banswada | AB Construction & Interior",
+    title: "AB Builders & Constructions in Banswada | AB Construction & Interior",
     description:
       "Interior designers, villa construction, home builders and commercial construction services in Telangana.",
     images: ["/hero-interior.png"]
